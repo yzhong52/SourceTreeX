@@ -1,36 +1,39 @@
 # Source Tree Custom Actions
 
-Open Preferences by `⌘``,` and then click on the "Custom Actions" tab:
+This [GitHub repo](https://github.com/yzhong52/GitX) constains a list of useful source tree. Building with existing git command, it extends the source tree functionalities. For example, you can keep the git repo clean with **delete merged branches**; and you can **undo last commit** if you made a mistake. 
+
+To use the custom actions here, simply clone the repo on your computer. Open Preferences by <kbd>⌘</kbd> + <kbd>,</kbd> and then click on the "Custom Actions" tab:
 
 ![](images/custom_actions.png)
 
-From here you can "Add", "Edit" or "Remove" custom actions for source tree.
+From there you can "Add", "Edit" or "Remove" custom actions for source tree.
 
 ![](images/custom_actions_add.png)
 
-This repo constains a list of useful shell scripts that can be used as custom actions in source tree. 
+Type in whatever you want in the Menu Caption. It is recomended to select the check boxes of both "Open in Separate Window" and "Show Full Output" so that it is easier to capture errors if there is one. 
+
+Ane here comes all the available actions in this repo:
 
 ## Delete Merged Branches
 
 Delete all branches that are merged to **current** branch, **master** branch, **dev** branch or **develop** branch. By default, this script only delete removed branches locally. If we want to also remove the merged branch in the remote, we can pass in the remote name as parameter.
 
-* script: `delete_removed_branches.sh`
-* suggested shortcut: `fn``-`
-* parameter: remote name (optional)
+* Script: `delete_removed_branches.sh`
+* Suggested shortcut: <kbd>fn</kbd> + <kbd>-</kbd>
+* Parameter: remote name (optional)
 
 ## Make Zombie Branch
 
 Rename the current branch to `zombie/YYYY-MMM-DD/HH-MM-SS/{Current Branch Name}`. The idea is to archive a branch instead of deleting it. It is nicer to put the branches in folder start with letter "z" instead of "a" (archive) because Source Tree will order the branches by lexical order. 
 
 * Script: `make_zombie.sh`
-* suggested shortcut: `fn``A`
+* Suggested shortcut: <kbd>fn</kbd> + <kbd>A</kbd>
 
 ## Kill Zombies
 
-Zombie branches that are older than 2 months will be  deleted. 
+Zombie branches that are older than 2 months will be deleted. 
 
 * Script: `kill_zombies.sh`
-* suggested shortcut: `fn``K`
 
 ## Force Push Current Branch To Remote
 
@@ -44,9 +47,9 @@ On one hand, force push is consider a dangerous operation since it will overwrit
 
 By default, this script will push to orign remote. But you can specify your remote name in the parameter. 
 
-* script: `force_push_current_branch.sh`
-* parameter: remote name (optional)
-* suggested shortcut: `fn``P`
+* Script: `force_push_current_branch.sh`
+* Parameter: remote name (optional)
+* Suggested shortcut: <kbd>fn</kbd> + <kbd>F</kbd>
 
 ## Undo Last Commit
 
@@ -56,5 +59,5 @@ Just in case we call this script by mistake, the script will make a archive (or 
 
 You can call this script multiple time to undo multiple commits.
 
-* script: `undo_last_commit.sh`
-* suggested shortcut: `fn``Z`
+* Script: `undo_last_commit.sh`
+* Suggested shortcut: <kbd>fn</kbd> + <kbd>Z</kbd>
