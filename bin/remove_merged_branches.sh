@@ -26,7 +26,7 @@ for branch_name in $all_branches; do
     # http://stackoverflow.com/a/6592241/1035008
     if [[ ! -z $remote_name ]]; then
       # Update local ref 
-      git -c fetch --prune $remote_name
+      git fetch --prune $remote_name
 
       echo "Delete branches that is merged to '$branch_name' in remote '$remote_name'..."
       git branch --remote --merged | egrep -v "(^\*|master|dev|develop)" | grep "^  $remote_name/" | sed "s/$remote_name\///" | xargs git push --delete $remote_name
