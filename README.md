@@ -37,6 +37,14 @@ Zombie branches that are older than 2 months will be deleted.
 
 ## Force Push Current Branch To Remote
 
+By default, this script will push to orign remote. But you can specify your remote name in the parameter. 
+
+* Script: `push_current_branch.sh`
+* Parameter: remote name (optional)
+* Suggested shortcut: <kbd>fn</kbd> + <kbd>P</kbd>
+
+## Force Push Current Branch To Remote
+
 You can enable force push from source tree directly. 
 
 ![](images/force_push.png)
