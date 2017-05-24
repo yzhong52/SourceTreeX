@@ -1,6 +1,6 @@
 # Source Tree Custom Actions
 
-This [GitHub repo](https://github.com/yzhong52/GitX) constains a list of useful source tree. Building with existing git command, it extends the source tree functionalities. For example, you can keep the git repo clean with **delete merged branches**; and you can **undo last commit** if you made a mistake. 
+This [GitHub repo](https://github.com/yzhong52/GitX) contains a list of useful source tree. Building with existing git command, it extends the source tree functionalities. For example, you can keep the git repo clean with **delete merged branches**; and you can **undo last commit** if you made a mistake. 
 
 To use the custom actions here, simply clone the repo on your computer. Open Preferences by <kbd>⌘</kbd> + <kbd>,</kbd> and then click on the "Custom Actions" tab:
 
