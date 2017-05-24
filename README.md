@@ -61,11 +61,18 @@ By default, this script will push to orign remote. But you can specify your remo
 
 ## Undo Last Commit
 
-Sometime we need to switch to a different branch to check some code, with a colleague for example. Howeve, you cannot do that if you have some uncommited changes. With this script, you can make a dummy commit just to save the WIP changes. And when you come back to this branch, you can simply undo the last commit. 
+Sometime we need to switch to a different branch ad hocly. However, we cannot do that with uncommited changes. Using this script, we can make a dummy commit to save the work-in-progess changes. And later on, after we finish the bussiness with the other branch, we can switch back to this branch, and simply undo the last commit. 
 
 Just in case we call this script by mistake, the script will make a archive (or zombie) before undoing the last commit so that we won't lost any commit message by accident.
 
-You can call this script multiple time to undo multiple commits.
+Also, you can call this script multiple time to undo multiple commits.
 
 * Script: `undo_last_commit.sh`
 * Suggested shortcut: <kbd>fn</kbd> + <kbd>Z</kbd>
+
+## Update Master
+
+This allows you to update **master** branch from a different branch. It is very userful in combination of `git rebase master`. Before submiting a pull request, we can update master (with this script) and rebase to master branch. 
+
+* Script: `update_master.sh`
+* Suggested shortcut: <kbd>fn</kbd> + <kbd>M</kbd>
