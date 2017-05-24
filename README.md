@@ -29,6 +29,8 @@ Rename the current branch to `zombie/YYYY-MMM-DD/HH-MM-SS/{Current Branch Name}`
 * Script: `make_zombie.sh`
 * Suggested shortcut: <kbd>fn</kbd> + <kbd>A</kbd>
 
+![](images/branches.png)
+
 ## Kill Zombies
 
 Zombie branches that are older than 2 months will be deleted. 
