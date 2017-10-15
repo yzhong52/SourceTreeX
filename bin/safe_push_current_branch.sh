@@ -57,7 +57,7 @@ else
 
     zombie_name="zombie/$(date +%Y-%b-%d/%H-%M-%S)/$branch_name"
     echo "Rename remote branch '$remote_name/$branch_name' to '$remote_name/$zombie_name'. "
-    git push $remote_name $remote_name/$branch_name:refs/heads/$zombie_name :$branch_name
+    git push $remote_name $remote_name/$branch_name:refs/heads/$zombie_name
 
     echo "Force push branch '$branch_name' to remote '$remote_name'. "
     git push --force-with-lease $remote_name $branch_name
