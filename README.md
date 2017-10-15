@@ -31,7 +31,9 @@ Rename the current branch to `zombie/YYYY-MMM-DD/HH-MM-SS/{Current Branch Name}`
 * Script: `make_zombie.sh`
 * Recommended shortcut: <kbd>fn</kbd> + <kbd>A</kbd>
 
-![](images/branches.png)
+<p align="center">
+<img src="images/branches.png"/>
+</p>
 
 ## Clean Up Zombie Branches
 
@@ -43,13 +45,19 @@ Zombie branches that are older than 1 month will be deleted.
 
 You can enable force push from SourceTree directly. 
 
-![](images/force_push.png)
+<p align="center">
+<img src="images/force_push.png"/>
+</p>
+
 
 However, force push is a dangerous operation since it will overwrite the history in the remote. When you make a mistake, then you'll lose your changes and there is no going back. This script will check if the remote branch has diverged from the local branch; if it is, then a zombie branch will be created in the remote so that you won't lost any of the changes. 
 
 Force push is a handy to keep the commit history clean. This feature is especially useful when being used along with `git amend` in SourceTree when you have some small changes that you just want to into the last commit. 
 
-![](images/amend.png)
+<p align="center">
+<img src="images/amend.png"/>
+</p>
+
 
 By default, this script will push to `origin` remote. But you can specify your remote name in the parameter. 
 
@@ -75,4 +83,6 @@ This allows you to update **master** branch from a different branch. It is very 
 * Script: `update_master.sh`
 * Recommended shortcut: <kbd>fn</kbd> + <kbd>M</kbd>
 
-![](images/rebase_master.png)
+<p align="center">
+<img src="images/rebase_master.png" width=300/>
+</p>
