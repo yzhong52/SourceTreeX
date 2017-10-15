@@ -13,7 +13,7 @@ zombie_name="zombie/$(date +%Y-%b-%d/%H-%M-%S)/$current_branch_name"
 echo "Rename branch from '$current_branch_name' to '$zombie_name'"
 git branch -m "$current_branch_name" "$zombie_name"
 
-echo "Stop tracking branch"
+echo "Stop tracking remote branch. "
 git branch --unset-upstream
 
-echo "Make Zombie Done. "
+echo "Make zombie done. "
