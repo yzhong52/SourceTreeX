@@ -11,7 +11,7 @@ all_branches="$current_branch_name master develop dev"
 # Remove duplicates
 all_branches=$(echo $all_branches | xargs -n1 | sort -u | xargs)
 
-# http://stackoverflow.com/a/17841619/1035008
+# Join elements of an array http://stackoverflow.com/a/17841619/1035008
 function join_by { local d=$1; shift; echo -n "$1"; shift; printf "%s" "${@/#/$d}"; }
 echo "Remove Merged Branches Begin! Branches to check: "
 echo $(join_by ', ' $all_branches)
