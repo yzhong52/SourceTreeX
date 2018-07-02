@@ -76,13 +76,21 @@ You can call this script multiple time to undo multiple commits.
 * Script: `undo_last_commit.sh`
 * Recommended shortcut: <kbd>fn</kbd> + <kbd>Z</kbd>
 
-## Update Master
+## Update Branches
 
-This allows you to update **master** branch from a different branch. It is very useful in combination of `git rebase master`. Normally, before submitting a pull request, we will update master (with this script) and rebase on the updated master branch. 
+This allows you to update **master** branch from a different branch without having the checkout the **master** branch first.
+Normally, before submitting a pull request, we will update master (handy with this script) and rebase change on top of it `git rebase master`. 
 
-* Script: `update_master.sh`
-* Recommended shortcut: <kbd>fn</kbd> + <kbd>M</kbd>
+This script will update stable branch as well if it exists. 
 
 <p align="center">
 <img src="images/rebase_master.png" width=300/>
 </p>
+
+
+* Script: `update_branches.sh`
+* Recommended shortcut: <kbd>fn</kbd> + <kbd>U</kbd>
+* Example output
+
+		✅ Update branch 'master'.
+		❌ Skip branch 'stable' since it doesn't exist.

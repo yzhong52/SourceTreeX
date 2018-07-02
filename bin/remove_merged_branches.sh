@@ -42,4 +42,4 @@ done
 git checkout --quiet $current_branch_name
 
 echo ""
-echo "Remove Merged Branches Done. "
+echo "All done. "
