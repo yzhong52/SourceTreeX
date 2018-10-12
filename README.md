@@ -40,6 +40,7 @@ Rename the current branch to `zombie/YYYY-MMM-DD/HH-MM-SS/{Current Branch Name}`
 Zombie branches that are older than 1 month will be deleted. 
 
 * Script: `kill_zombies.sh`
+* Recommended shortcut: <kbd>fn</kbd> + <kbd>K</kbd>
 
 ## Safe Force Push Current Branch To Remote
 
@@ -52,18 +53,17 @@ You can enable force push from SourceTree directly.
 
 However, force push is a dangerous operation since it will overwrite the history in the remote. When you make a mistake, then you'll lose your changes and there is no going back. This script will check if the remote branch has diverged from the local branch; if it is, then a zombie branch will be created in the remote so that you won't lost any of the changes. 
 
-Force push is a handy to keep the commit history clean. This feature is especially useful when being used along with `git amend` in SourceTree when you have some small changes that you just want to into the last commit. 
+Force push is a handy to keep the commit history clean. This feature is especially useful when being used along with `git amend` in SourceTree when you have some small changes that you just want to amende to the last commit. 
 
 <p align="center">
 <img src="images/amend.png"/>
 </p>
 
-
 By default, this script will push to `origin` remote. But you can specify your remote name in the parameter. 
 
 * Script: `safe_push_current_branch.sh`
 * Parameter: remote name (optional)
-* Recommended shortcut: <kbd>fn</kbd> + <kbd>F</kbd>
+* Recommended shortcut: <kbd>fn</kbd> + <kbd>P</kbd>
 
 ## Undo Last Commit
 
@@ -75,6 +75,10 @@ You can call this script multiple time to undo multiple commits.
 
 * Script: `undo_last_commit.sh`
 * Recommended shortcut: <kbd>fn</kbd> + <kbd>Z</kbd>
+
+This is a similar idea with `git stash`, however, I prefer seeing everything in my tree :)
+
+> Use **git stash** when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit. [reference](https://git-scm.com/docs/git-stash)
 
 ## Update Branches
 
