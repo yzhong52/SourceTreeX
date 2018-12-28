@@ -24,6 +24,10 @@ else
     echo "Failed to push. Trying force push ..."
 fi
 
+# Make local branch track remote branch
+# https://stackoverflow.com/a/4879224/1035008
+git branch $branch_name --set-upstream-to '$remote_name/$branch_name'
+
 set -e
 
 git fetch $remote_name
