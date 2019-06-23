@@ -155,8 +155,8 @@
 		<string>showFullOutput</string>
 		<true/>
 		<false/>
-		<string>/Users/yzhong/Documents/SourceTreeX/bin/remove_merged_branches.sh</string>
-		<string>Yuchen</string>
+		<string>/usr/local/bin/source_tree_remove_merged_branches</string>
+		<string>MyFork</string>
 		<integer>27</integer>
 		<integer>8388608</integer>
 		<string>-</string>
@@ -272,7 +272,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>/Users/yzhong/Documents/SourceTreeX/bin/safe_push_current_branch.sh</string>
+		<string>source_tree_safe_push_current_branch</string>
 		<integer>35</integer>
 		<string>P</string>
 		<string>Safe Push Current Branch</string>
