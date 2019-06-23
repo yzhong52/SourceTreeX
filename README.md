@@ -1,6 +1,11 @@
 # SourceTree Custom Actions
 
-This [GitHub repo](https://github.com/yzhong52/SourceTreeX) contains a list of useful SourceTree custom actions. Building with existing git command, it extends the SourceTree functionalities. For example, you can **delete merged branches** to quickly keep the remote clean; and you can **undo the last commit** if you made a mistake. 
+This repo contains a list of useful SourceTree custom actions.
+Building with existing git command, it extends the SourceTree functionalities.
+For example, you can **delete merged branches** to quickly keep the remote clean;
+and you can **undo the last commit** if you made a mistake. 
+
+## Usage
 
 To use the custom actions here, simply checkout the repo on your machine. In SourceTree, open Preferences by <kbd>⌘</kbd> + <kbd>,</kbd> and then click on the "Custom Actions" tab:
 
@@ -14,7 +19,7 @@ Type in whatever you want in the Menu Caption. It is recommended to select both 
 
 And here are the available actions in this repo:
 
-## Remove Merged Branches
+### Remove Merged Branches
 
 Delete all branches that are merged to **current** branch, **master** branch, **dev** branch or **develop** branch. By default, this script only deletes merged branches locally. If we want to also remove the merged branch in a remote, we can pass in the remote name as a parameter.
 
@@ -24,7 +29,7 @@ Delete all branches that are merged to **current** branch, **master** branch, **
 
 This is very useful for keeping the repo clean. During development, we can easily end up with a lot of PR branches that are merged. They can be clean up with this easily. 
 
-## Make Zombie Branch
+### Make Zombie Branch
 
 Rename the current branch to `zombie/YYYY-MMM-DD/HH-MM-SS/{Current Branch Name}`. The idea is to archive a branch instead of deleting it immediately. It is nicer to put the branches in folder start with letter "z" (zombie) instead of "a" (archive) because SourceTree will order the branches by lexical order. 
 
@@ -35,14 +40,14 @@ Rename the current branch to `zombie/YYYY-MMM-DD/HH-MM-SS/{Current Branch Name}`
 <img src="images/branches.png"/>
 </p>
 
-## Clean Up Zombie Branches
+### Clean Up Zombie Branches
 
 Zombie branches that are older than 1 month will be deleted. 
 
 * Script: `kill_zombies.sh`
 * Recommended shortcut: <kbd>fn</kbd> + <kbd>K</kbd>
 
-## Safe Force Push Current Branch To Remote
+### Safe Force Push Current Branch To Remote
 
 You can enable force push from SourceTree directly. 
 
@@ -65,7 +70,7 @@ By default, this script will push to `origin` remote. But you can specify your r
 * Parameter: remote name (optional)
 * Recommended shortcut: <kbd>fn</kbd> + <kbd>P</kbd>
 
-## Undo Last Commit
+### Undo Last Commit
 
 Sometimes we need to ad-hoc switch to a different branch. However, we cannot do that with uncommitted changes. Using this script, we can make a dummy commit to save the work-in-progress changes. And later on, after we finish the business with the other branch, we can switch back to this branch, and simply undo the last commit. 
 
@@ -80,7 +85,7 @@ This is a similar idea with `git stash`, however, I prefer seeing everything in 
 
 > Use **git stash** when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit. [reference](https://git-scm.com/docs/git-stash)
 
-## Update Branches
+### Update Branches
 
 This allows you to update **master** branch from a different branch without having the checkout the **master** branch first.
 Normally, before submitting a pull request, we will update master (handy with this script) and rebase change on top of it `git rebase master`. 
@@ -88,7 +93,7 @@ Normally, before submitting a pull request, we will update master (handy with th
 This script will update stable branch as well if it exists. 
 
 <p align="center">
-<img src="images/rebase_master.png" width=300/>
+<img src="images/rebase_master.png"/>
 </p>
 
 
@@ -98,3 +103,23 @@ This script will update stable branch as well if it exists.
 
 		✅ Update branch 'master'.
 		❌ Skip branch 'stable' since it doesn't exist.
+
+## Power users 💪
+
+
+Source Tree saves all the custom actions under:
+
+
+	/Library/Application Support/SourceTree/actions.plist
+
+The `install.sh` script will create symbolic links for each of the custom actions here in folder `usr/local/bin` and update `actions.plist`. 
+
+❗❗❗This will overwrite your existing action settings❗❗❗
+
+After running `sh install.sh`, restart Sourcetree, and expect to see the following:
+
+<p align="center">
+<img src="images/installed.png"/>
+</p>
+
+
