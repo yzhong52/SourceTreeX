@@ -21,7 +21,8 @@ echo "Created symbolic links:"
 ls $INSTALL_DIR/source_tree_*
 
 # Make a backup
-cp "$SOURCETREE_DIR/actions.plist" "actions_backup_$NOW.plist"
+mkdir actions_backups
+cp "$SOURCETREE_DIR/actions.plist" "actions_backups/$NOW.plist"
 
 # Update custom actions
 cp actions.plist "$SOURCETREE_DIR/actions.plist"
