@@ -26,3 +26,5 @@ cp "$SOURCETREE_DIR/actions.plist" "actions_backups/$NOW.plist"
 
 # Update custom actions
 cp actions.plist "$SOURCETREE_DIR/actions.plist"
+
+echo "Done."
