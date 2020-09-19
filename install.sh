@@ -3,7 +3,7 @@
 BASE_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 INSTALL_DIR="/usr/local/bin"
 PREFIX="source_tree_"
-SOURCETREE_DIR=~/Library/Application\ Support/SourceTree
+SOURCETREE_DIR=/Applications/Sourcetree.app/Contents
 NOW=$(date '+%Y-%m-%d_%H.%M.%S')
 
 
