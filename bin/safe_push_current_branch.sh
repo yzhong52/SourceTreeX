@@ -55,7 +55,7 @@ elif [ $local_hash = $base_hash ]; then
     exit 1
 elif [ $remote_hash = $base_hash ]; then
     echo "Need to push. "
-    git push $remote_name $branch_name
+    git push -u $remote_name $branch_name
 else
     echo "Branch diverged. Need to force push. "
 
@@ -63,8 +63,9 @@ else
     echo "Rename remote branch '$remote_name/$branch_name' to '$remote_name/$zombie_name'. "
     git push $remote_name $remote_name/$branch_name:refs/heads/$zombie_name
 
+    # -u here to also set the tracking branch
     echo "Force push branch '$branch_name' to remote '$remote_name'. "
-    git push --force-with-lease $remote_name $branch_name
+    git push -u --force-with-lease $remote_name $branch_name
 fi
 
 echo "Safe force push done. "
